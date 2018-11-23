@@ -1,12 +1,12 @@
-.vuegram-post {
+.instagram-post {
   padding-top: 50px;
 }
 
-.vuegram-post ~ .vuegram-post {
+.instagram-post ~ .instagram-post {
   padding-top: 0;
 }
 
-.vuegram-post {
+.instagram-post {
   padding: 5px 0;
 
   .header {
@@ -56,21 +56,22 @@
   }
 
   .likes {
-    margin: 5px 0;
+    margin: 0 5px;
     margin-bottom: 5px !important;
-    font-size: 0.85rem;
     font-weight: bold;
   }
 
   .caption {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    margin-top: 2px;
 
-    span {
+    .username {
       font-weight: bold;
+      margin-right: 5px;
     }
   }
 }
 
-.vuegram-post:last-child {
+.instagram-post:last-child {
   margin-bottom: 80px;
 }
