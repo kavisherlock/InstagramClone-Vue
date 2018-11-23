@@ -11,10 +11,14 @@
     <div class="image-container"
       :class="post.filter"
       :style="{ backgroundImage: 'url(' + post.postImage + ')' }"
+      @dblclick="like"
     />
     <div class="content">
       <div class="heart">
-        <i class="far fa-heart fa-lg" />
+        <i class="far fa-heart fa-lg"
+          :class="{'fas': this.post.hasBeenLiked}"
+          @click="like"
+        />
         <span class="likes">{{post.likes}} likes</span>
       </div>
       <p class="caption">
@@ -29,6 +33,12 @@ export default {
   name: 'InstagramPost',
   props: {
     post: Object,
+  },
+  methods: {
+    like() {
+      this.post.hasBeenLiked ? this.post.likes -= 1 : this.post.likes += 1;
+      this.post.hasBeenLiked = !this.post.hasBeenLiked;
+    },
   },
 };
 </script>
