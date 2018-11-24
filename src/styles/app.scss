@@ -20,15 +20,13 @@ body,
 
 .app-phone {
   background-color: white;
-  height: 90%;
-  width: 30%;
-  min-width: 400px;
-  min-height: 400px;
+  height: 800px;
+  width: 500px;
   overflow: hidden;
 }
 
 .phone-header {
-  height: 50px;
+  height: 60px;
   width: 100%;
   position: sticky;
   position: -webkit-sticky;
@@ -38,27 +36,28 @@ body,
   z-index: 99;
 
   img {
-    max-width: 140px;
+    max-width: 150px;
     display: block;
     margin: 0 auto;
-    padding-top: 7px;
+    padding-top: 10px;
   }
 
   .cancel-cta,
   .next-cta {
     position: absolute;
-    top: 12px;
+    top: 15px;
+    font-size: 18px;
     color: #209cee;
     font-weight: bold;
     cursor: pointer;
   }
 
   .cancel-cta {
-    left: 10px;
+    left: 18px;
   }
 
   .next-cta {
-    right: 10px;
+    right: 18px;
   }
 }
 
