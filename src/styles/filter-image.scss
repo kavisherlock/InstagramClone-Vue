@@ -1,22 +1,23 @@
-.filter-type {
-  width: 100px;
+.filter-image {
+  width: 140px;
   display: inline-block;
   margin: 0 3px;
   p {
-    font-size: 11px;
+    font-size: 13px;
+    color: slategrey;
     text-align: center;
     text-transform: capitalize;
     padding-bottom: 5px;
   }
   .img {
     cursor: pointer;
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     background-size: cover;
     background-position: center center;
   }
 }
 
-.filter-type:last-child {
+.filter-image:last-child {
   margin-right: 20px;
 }
