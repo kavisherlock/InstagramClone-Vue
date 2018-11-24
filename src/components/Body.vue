@@ -1,6 +1,6 @@
 <template>
   <div class="phone-body">
-    <div v-if="step === 1" class="feed">
+    <div v-if="step === 1" class="feed" v-dragscroll.y>
       <instagram-post v-for="post in posts"
         :post="post"
         :key="posts.indexOf(post)"
@@ -12,7 +12,7 @@
         :class="selectedFilter"
         :style="{ backgroundImage: 'url(' + image + ')' }"
       />
-      <div class="filter-container">
+      <div class="filter-container" v-dragscroll.x>
         <filter-image v-for="filter in filters"
           :filter="filter"
           :image="image"
