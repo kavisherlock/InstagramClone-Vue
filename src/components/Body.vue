@@ -6,6 +6,7 @@
         :key="posts.indexOf(post)"
       />
     </div>
+
     <div v-if="step === 2" class="image-upload">
       <div class="selected-image"
         :class="selectedFilter"
@@ -17,6 +18,21 @@
           :image="image"
           :key="filters.indexOf(filter)">
         </filter-image>
+      </div>
+    </div>
+
+    <div v-if="step === 3" class="image-upload">
+      <div class="selected-image"
+        :class="selectedFilter"
+        :style="{ backgroundImage: 'url(' + image + ')' }">
+      </div>
+      <div class="caption-container">
+        <textarea class="caption-input"
+          placeholder="Enter a caption..."
+          type="text"
+          :value="value"
+          @input="$emit('input', $event.target.value)"
+        />
       </div>
     </div>
   </div>
@@ -34,6 +50,7 @@ export default {
     step: Number,
     image: String,
     selectedFilter: String,
+    value: String,
   },
   components: {
     'instagram-post': InstagramPost,
